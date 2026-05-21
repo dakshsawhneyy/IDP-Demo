@@ -1,29 +1,30 @@
 name: Infra Vending Machine
 
 on:
-  workflow_dispatch:
-    inputs:
-      bucket_name:
-        description: 'S3 Bucket Name'
-        required: false
-      table_name:
-        description: 'DynamoDB Table Name'
-        required: false
-      inst_name:
-        description: 'EC2 Instance Name'
-        required: false
-      inst_type:
-        description: 'EC2 Instance Type'
-        default: 't3.micro'
-        required: false
-      st_reqd:
-        description: 'EC2 Storage Required'
-        default: 8
-        required: false
-      environment:
-        description: 'Environment'
-        default: 'dev'
-        required: false
+  push: 
+  # workflow_dispatch:
+  #   inputs:
+  #     bucket_name:
+  #       description: 'S3 Bucket Name'
+  #       required: false
+  #     table_name:
+  #       description: 'DynamoDB Table Name'
+  #       required: false
+  #     inst_name:
+  #       description: 'EC2 Instance Name'
+  #       required: false
+  #     inst_type:
+  #       description: 'EC2 Instance Type'
+  #       default: 't3.micro'
+  #       required: false
+  #     st_reqd:
+  #       description: 'EC2 Storage Required'
+  #       default: 8
+  #       required: false
+  #     environment:
+  #       description: 'Environment'
+  #       default: 'dev'
+  #       required: false
 
 jobs:
   deploy-S3:
